@@ -1,7 +1,7 @@
 import React from 'react'
 import './sign-in.styles.scss'
 
-import {signInWithGoole} from '../../firebase/firebase.utils'
+import {signInWithGoole, auth} from '../../firebase/firebase.utils'
 
 import FormInput from '../form-input/form-input.component'
 import CustomButton from '../custom-button/custom-button.component'
@@ -15,9 +15,14 @@ export default class SignIn extends React.Component{
       password: ''
     }
   }
-  handleSubmit = e =>{
+  handleSubmit = async e =>{
     e.preventDefault()
-
+    const {email, password} = this.state
+    try{
+      await auth.signInWithEmailAndPassword(email, password)
+    }catch(e){
+      console.log(e)
+    }
     this.setState(
       {
         email: '',

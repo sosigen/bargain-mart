@@ -30,7 +30,6 @@ class App extends React.Component {
               ...snapshot.data()
             }
           }, () => console.log(this.state))
-          console.log(this.state)
           
         })
       }
