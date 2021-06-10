@@ -46,7 +46,7 @@ export default class SignIn extends React.Component{
           value={this.state.email}
           label="email"
           handleChange={this.handleChange} 
-          // required
+          required
         />
         <FormInput
           name="password"
@@ -54,11 +54,11 @@ export default class SignIn extends React.Component{
           value={this.state.password}
           label="password"
           handleChange={this.handleChange}
-          // required
+          required
         />
         <div className="buttons">
           <CustomButton type="submit">sign in</CustomButton>
-          <CustomButton onClick={signInWithGoole} isGoogleSignIn>sign in with Google</CustomButton>
+          <CustomButton type="button" onClick={signInWithGoole} isGoogleSignIn>sign in with Google</CustomButton>
         </div>
       </form>
     </div>
