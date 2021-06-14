@@ -1,3 +1,4 @@
+$sub-color: #222;
 @mixin inversed-appearance {
 	background-color: white;
 	color: black;
@@ -5,7 +6,7 @@
 }
 @mixin normal-appearance {
 	background-color: black;
-	color: white;
+	color: $sub-color;
 	border: none;
 }
 .custom-button {
