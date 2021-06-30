@@ -4,4 +4,8 @@ export const SignInAndUpContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	margin: 30px auto;
+	margin-left: 0;
+	@media screen and (max-width: 800px) {
+		flex-direction: column;
+	}
 `;
